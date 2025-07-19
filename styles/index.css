@@ -217,13 +217,13 @@ a{
     /* box-shadow: ; */
   }
 
-  .course-card.completed {
-    /* border-color: var(--secondary-color); */
-  }
+  /* .course-card.completed {
+    border-color: var(--secondary-color);
+  } */
 
-  .course-card.completed::before {
-    /* background: var(--secondary-color); */
-  }
+  /* .course-card.completed::before {
+    background: var(--secondary-color);
+  } */
 
   .course-header {
     display: flex;
@@ -278,9 +278,9 @@ a{
     color: var(--secondary-color);
   }
 
-  .status-completed {
-    /* color: var(--secondary-color); */
-  }
+  /* .status-completed {
+    color: var(--secondary-color);
+  } */
 
   .status-progress {
     color: var(--primary-color);
