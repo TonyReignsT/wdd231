@@ -7,10 +7,10 @@ const cards = document.querySelector('#cards');
 const getProphetData = async () => {
     try {
         const response = await fetch(url);
-        const data = await response.json();
+        const data = await response.json(); //Converting to javascript object strings
         // console.table(data); 
         // console.log(data)
-        displayProphets(data.prophets);
+        displayProphets(data.prophets); 
     } catch (error) {
         console.error("Error fetching data: ", error);
     }
