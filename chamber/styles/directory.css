@@ -1,0 +1,11 @@
+:root {
+  --primary-color: ;
+  --secondary-color: ;
+  --font-family: "montserrat", sans-serif;
+  --font-color: ;
+}
+* {
+  padding: 0;
+  margin: o;
+  box-sizing: border-box;
+}
