@@ -4,8 +4,48 @@
   --font-family: "montserrat", sans-serif;
   --font-color: ;
 }
+
 * {
   padding: 0;
   margin: o;
   box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var();
+    color: var();
+}
+
+
+/* .hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+} */
+
+#cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.company-card {
+  border: 1px solid black;
+  padding: 1rem;
+  text-align: center;
+}
+

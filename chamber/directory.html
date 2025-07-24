@@ -10,10 +10,11 @@
   <meta property="og:image" content="" />
   <meta property="og:url" content="">
   <title>Document</title>
+  <link rel="stylesheet" href="./styles/directory.css">
+  <script src="./scripts/directory.js" defer></script>
 </head>
 
 <body>
-  <figure>
     <header>
       <figure>
         <img src="" alt="logo">
@@ -34,9 +35,32 @@
       </nav>
     </header>
     <main>
-      <section class="hero"></section>
+      <section class="hero">
+        <img src="" alt="">
+        <button class="hero-btn">Keynote Tickets</button>
+      </section>
+      <section class="home">
+        <div class="events"></div>
+        <div class="weather"></div>
+        <div class="forecast"></div>
+      </section>
+      <section id="cards"></section>
     </main>
-    <footer></footer>
+    <footer>
+      <div></div>
+      <div class="socials">
+        <a href="#"><img src="" alt="youtube" /></a>
+        <a href="#"><img src="" alt="X" /></a>
+        <a href="#"><img src="" alt="linkedin" /></a>
+      </div>
+          <div class="date-foot">
+            <p>
+          &copy; <span id="currentyear"></span> | Antony Ochieng | Nairobi,
+          Kenya.
+        </p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
 </body>
 
 </html>
