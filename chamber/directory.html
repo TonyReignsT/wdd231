@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
+    <!-- Facebook Open Graph Meta Tags -->
+<meta property="og:title" content="Timbuktu Chamber of Commerce" />
+<meta property="og:description" content="Connecting businesses, empowering growth  discover Timbuktu's business directory, events, and more." />
+<meta property="og:image" content="https://example.com/images/chamber-preview.png" />
+<meta property="og:url" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Timbuktu Chamber of Commerce" />
+
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"/>
     <link rel="stylesheet" href="./styles/directory.css" />
     <script src="./scripts/directory.js" defer></script>
   </head>
@@ -16,7 +21,7 @@
   <body>
     <header>
       <figure>
-        <img src="" alt="logo" />
+        <img src="./images/company.png" alt="logo" />
         <figcaption>Timbuktu Chamber of Commerce</figcaption>
       </figure>
 
@@ -36,27 +41,57 @@
     </header>
     <main>
       <section class="hero">
-        <img src="" alt="" />
+        <!-- <img src="" alt="hero-image" /> -->
         <button class="hero-btn">Keynote Tickets</button>
       </section>
       <section class="home">
-        <div class="events"></div>
-        <div class="weather"></div>
-        <div class="forecast"></div>
+        <h2>Home</h2>
+        <div class="events card">
+          <h2 class="titles">Events</h2>
+          <!-- <p id="event"></p> -->
+        </div>
+        <div class="weather card">
+          <h2 class="titles">Current Weather</h2>
+          <div class="contents">
+            <img src="./images/cloudy.png" alt="cloudy">
+            <div>
+              <p><b>75&deg;F</b></p>
+              <p>Partly Cloudy</p>
+              <p>High: 85&deg;</p>
+              <p>Low: 53&deg;</p>
+              <p>Humidity: 34%</p>
+              <p>Sunrise: 7:30am</p>
+              <p>Sunset: 9:59pm</p>
+            </div>
+          </div>
+        </div>
+        <div class="forecast card">
+          <h2 class="titles">Weather Forecast</h2>
+          <p>Today: <b>90&deg;F</b></p>
+          <p>Wednesday: <b>89&deg;F</b></p>
+          <p>Thursday: <b>68&deg;F</b></p>
+        </div>
       </section>
       <section id="cards"></section>
     </main>
     <footer>
-      <div></div>
+      <div class="address">
+        <h3>Timbuktu Chamber of Commerce</h3>
+        <p>10 Rue De La Paix</p>
+        <p>Timbuktu, Mali 999</p>
+        <p>info@timbuktucc.org</p>
+        <p>(223)  555-2300</p>
+      </div>
       <div class="socials">
-        <a href="#"><img src="" alt="youtube" /></a>
-        <a href="#"><img src="" alt="X" /></a>
-        <a href="#"><img src="" alt="linkedin" /></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+        <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
       </div>
       <div class="date-foot">
+        <p>WDD231 Class Project</p>
+        <p>Antony Ochieng</p>
         <p>
-          &copy; <span id="currentyear"></span> | Antony Ochieng | Nairobi,
-          Kenya.
+          &copy; <span id="currentyear"></span> Timbuktu Chamber of Commerce
         </p>
         <p id="lastModified"></p>
       </div>

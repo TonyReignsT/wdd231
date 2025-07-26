@@ -18,7 +18,7 @@ html {
 
 body {
     font-family: var(--font-family);
-    background-color: #f5f5f5;
+    background-color: var(--secondary-color);
     min-height: 100vh;
     
 }
@@ -46,7 +46,7 @@ figure img {
   height: 48px;
   object-fit: cover;
   border-radius: 8px;
-  border: 2px solid var(--text-color);
+  border: 2px solid var(--background);
 }
 figcaption {
   font-size: 1.3rem;
@@ -88,6 +88,10 @@ figcaption {
     position: relative;
     overflow: hidden;
 }
+.nav-link:hover {
+  text-decoration: underline;
+  transition: 2s ease;
+}
 
 
 
@@ -108,17 +112,168 @@ figcaption {
     transition: all 0.3s ease-in-out;
     background-color: white;
 }
+/* Hero Section  */
 
-/* #cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.hero {
+  min-height: 50vh;
+  width: 80%;
+  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../images/chamber.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+  background-repeat: no-repeat;
 }
-.company-card {
-  border: 1px solid black;
+.hero-btn {
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.hero-btn:hover {
+  background-color: var(--background);
+  color: var(--text-color);
+  transition: 0.5s ease;
+}
+
+/* Home Section  */
+.home {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 80%;
+  margin: 0 auto;
+}
+.home h2 {
   padding: 1rem;
-  text-align: center;
-} */
+  color: var(--primary-color);
+}
+.events {
+  grid-column: 1 / 3;
+  
+}
+.weather {
+  grid-column: 3 / 4;
+}
+.forecast {
+  grid-column: 4 / 5;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: #262626;
+}
+.titles {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+.contents {
+  display: flex;
+  justify-content: space-between;
+}
+.contents img {
+  width: 100px;
+  height: 100px;
+}
+
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.company-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 1.5rem;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.company-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+
+.company-card p:first-of-type {
+  margin: 0 0 1rem 0;
+  font-size: 1.05rem;
+  color: #555;
+  font-style: italic;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+.card-div {
+  display: flex;
+  gap: 1.5rem;
+  /* justify-content: space-evenly; */
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.card-div img {
+  width: 160px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+} 
+
+.card-div .contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.3rem;
+}
+
+.card-div .contact-info p {
+  margin: 0;
+  color: #333;
+  word-break: break-all;
+}
+
+/* Footer Section  */
+footer {
+  background-color: var(--background);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1.5rem;
+}
+.socials {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.fa-brands  {
+  color: var(--text-color);
+  font-size: 2rem;
+}
+.fa-brands:hover {
+  color: var(--secondary-color);
+}  
+
 
 
 @media screen and (max-width: 768px) {
@@ -145,11 +300,25 @@ figcaption {
     width: 100%;
     text-align: center;
     transition: 0.3s;
+    z-index: 1000;
   }
   .nav-item {
     margin: 16px 0;
   }
   .nav-menu.active {
     left: 0;
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
   }
 }

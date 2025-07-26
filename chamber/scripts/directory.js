@@ -20,7 +20,6 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 );
 
-
 //Company Section
 const getCompanyData = async () => {
   try {
@@ -37,6 +36,8 @@ const getCompanyData = async () => {
 const displayCard = (companies) => {
   companies.forEach((company) => {
     let card = document.createElement("div");
+    let cardDiv = document.createElement("div");
+    let contactInfo = document.createElement("div");
     let name = document.createElement("h3");
     let tagLine = document.createElement("p");
     let image = document.createElement("img");
@@ -46,6 +47,8 @@ const displayCard = (companies) => {
 
     // Card attribute
     card.classList.add("company-card");
+    cardDiv.classList.add("card-div");
+    contactInfo.classList.add("contact-info");
 
     name.textContent = `${company.name}`;
     tagLine.textContent = `${company.tagline}`;
@@ -62,10 +65,13 @@ const displayCard = (companies) => {
 
     card.appendChild(name);
     card.appendChild(tagLine);
-    card.appendChild(image);
-    card.appendChild(email);
-    card.appendChild(phone);
-    card.appendChild(url);
+    cardDiv.appendChild(image);
+    contactInfo.appendChild(email);
+    contactInfo.appendChild(phone);
+    contactInfo.appendChild(url);
+
+    cardDiv.appendChild(contactInfo);
+    card.appendChild(cardDiv);
 
     cards.appendChild(card);
   });
