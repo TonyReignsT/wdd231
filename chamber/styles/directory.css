@@ -86,10 +86,24 @@ figcaption {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  border-radius: 5px;
 }
 .nav-link:hover {
   text-decoration: underline;
   transition: 2s ease;
+}
+
+/* Style for the active/current page */
+.nav-link.active {
+  background-color: var(--secondary-color); /* Yellow background */
+  color: var(--primary-color); /* Green text */
+  font-weight: 700; /* Bolder text */
+  text-decoration: none;
+}
+.nav-link.active:hover {
+  background-color: var(--secondary-color); /* Keep yellow on hover */
+  color: var(--background); /* Darker green on hover */
+  text-decoration: none;
 }
 
 .hamburger {
@@ -109,6 +123,10 @@ figcaption {
   transition: all 0.3s ease-in-out;
   background-color: white;
 }
+
+/* Wayfindind  */
+
+
 /* Hero Section  */
 
 .hero {
