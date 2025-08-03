@@ -185,12 +185,47 @@ figcaption {
   height: 100px;
 }
 
+.view-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem;
+}
+.view-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.view-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.view-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
 #cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 2rem;
   width: 90%;
   margin: 2rem auto;
+}
+
+#cards.list-view {
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
 .company-card {
@@ -210,16 +245,25 @@ figcaption {
   color: var(--primary-color);
 }
 
-.company-card p:first-of-type {
+.company-card .tagline {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  color: #666;
+  font-style: italic;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+/* .company-card p:first-of-type {
   margin: 0 0 1rem 0;
   font-size: 1.05rem;
   color: #555;
   font-style: italic;
   border-bottom: 2px solid var(--primary-color);
   padding-bottom: 0.5rem;
-}
+} */
 
-.card-div {
+.card-content {
   display: flex;
   gap: 1.5rem;
   /* justify-content: space-evenly; */
@@ -227,7 +271,11 @@ figcaption {
   margin-top: 1rem;
 }
 
-.card-div img {
+.card-content.list-view {
+  margin-top: 0;
+  flex-grow: 1;
+}
+.card-content img {
   width: 160px;
   height: 200px;
   border-radius: 8px;
@@ -235,17 +283,30 @@ figcaption {
   flex-shrink: 0;
 }
 
-.card-div .contact-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 0.3rem;
+.list-view .card-content img {
+  width: 80px;
+  height: 80px;
 }
 
-.card-div .contact-info p {
+.card-content .contact-info {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  gap: 0.3rem;
+  flex-grow: 1;
+}
+
+.card-content .contact-info p {
   margin: 0;
   color: #333;
-  word-break: break-all;
+  word-break: break-word;
+}
+.list-view .company-card .tagline {
+  display: none;
+}
+
+.list-view .card-content {
+  align-items: center;
 }
 
 /* Footer Section  */
@@ -270,49 +331,581 @@ footer {
   color: var(--secondary-color);
 }
 
+/* Mobile devices (up to 768px) */
 @media screen and (max-width: 768px) {
   .hamburger {
-    display: block;
+    display: flex;
   }
-  /* Making the X  */
+
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
+
   .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
+
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+
   .nav-menu {
     position: fixed;
     left: -100%;
     top: 70px;
-    gap: 0;
     flex-direction: column;
-    background-color: #262626;
+    background-color: var(--background);
     width: 100%;
     text-align: center;
     transition: 0.3s;
     z-index: 1000;
+    max-width: 100%;
+    overflow-x: hidden;
   }
+
   .nav-item {
-    margin: 16px 0;
+    margin: 0.5rem 0;
+    width: 100%;
   }
+
+  .nav-link {
+    display: block;
+    padding: 1rem;
+  }
+
   .nav-menu.active {
     left: 0;
   }
+
+  header {
+    padding: 0 1rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  figure {
+    gap: 8px;
+  }
+
+  figcaption {
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 0 0.5rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .hero {
+    width: 95%;
+    min-height: 30vh;
+    max-width: 100%;
+  }
+
+  .hero-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
   .home {
     display: flex;
     flex-direction: column;
+    width: 95%;
+    gap: 1rem;
+    max-width: 100%;
+    overflow-x: hidden;
   }
-  footer {
-    display: flex;
+
+  .home h2 {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .contents {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  .socials {
-    display: flex;
+
+  .contents img {
+    width: 80px;
+    height: auto;
+  }
+
+  #cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 95%;
+    justify-items: center;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .company-card {
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .card-content {
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+  }
+
+  .card-content img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+  }
+
+  .list-view .card-content {
+    flex-direction: row;
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  .list-view .card-content img {
+    width: 80px;
+    height: auto;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .socials {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .fa-brands {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablets and medium screens (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Ensure header covers full width */
+  header {
+    padding: 0 2rem;
+    width: 100%;
+    background-color: var(--background);
+  }
+  
+  /* Reset hamburger - should be hidden on larger screens */
+  .hamburger {
+    display: none;
+  }
+  
+  /* Ensure nav menu is visible and properly styled */
+  .nav-menu {
+    position: static;
+    left: auto;
+    top: auto;
+    flex-direction: row;
+    background-color: transparent;
+    width: auto;
+    text-align: left;
+    transition: none;
+    z-index: auto;
+    max-width: none;
+    overflow-x: visible;
     gap: 2rem;
+  }
+  
+  .nav-item {
+    margin: 0;
+    width: auto;
+  }
+  
+  .nav-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
+  
+  main {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+  
+  .hero {
+    width: 90%;
+    min-height: 55vh;
+  }
+  
+  .home {
+    width: 90%;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .home h2 {
+    text-align: left;
+    padding: 1rem;
+  }
+  
+  .contents {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .contents img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  #cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: 95%;
+    justify-items: stretch;
+    max-width: none;
+    overflow-x: visible;
+  }
+  
+  .company-card {
+    padding: 1.5rem;
+    align-items: stretch;
+    text-align: left;
+    max-width: none;
+  }
+  
+  .card-content {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .card-content img {
+    width: 140px;
+    height: 180px;
+    max-width: none;
+  }
+  
+  footer {
+    flex-direction: row;
+    text-align: left;
+    gap: 2rem;
+    padding: 1.5rem;
+    max-width: none;
+    overflow-x: visible;
+    justify-content: center;
+  }
+  
+  .socials {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+
+/* Large desktops (1025px - 1440px) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  header {
+    padding: 0 3rem;
+    width: 100%;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .hero {
+    width: 95%;
+    min-height: 60vh;
+  }
+  
+  .home {
+    width: 95%;
+    gap: 2rem;
+  }
+  
+  #cards {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+  
+  .company-card {
+    padding: 2rem;
+  }
+  
+  .company-card h3 {
+    font-size: 1.4rem;
+  }
+  
+  .card-content {
+    gap: 1.5rem;
+  }
+  
+  .card-content img {
+    width: 160px;
+    height: 200px;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+  }
+  
+  .nav-menu {
+    gap: 3rem;
+  }
+  
+  .nav-link {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.25rem;
+  }
+  
+  figcaption {
+    font-size: 1.4rem;
+  }
+}
+
+/* Extra large desktops (1441px - 1920px) */
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  header {
+    padding: 0 4rem;
+    width: 100%;
+  }
+  
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .hero {
+    width: 100%;
+    min-height: 65vh;
+  }
+  
+  .home {
+    width: 100%;
+    gap: 2.5rem;
+  }
+  
+  #cards {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 2rem auto;
+  }
+  
+  .company-card {
+    padding: 2.5rem;
+  }
+  
+  .company-card h3 {
+    font-size: 1.5rem;
+  }
+  
+  .card-content {
+    gap: 2rem;
+  }
+  
+  .card-content img {
+    width: 180px;
+    height: 220px;
+  }
+  
+  .contact-info p {
+    font-size: 1.1rem;
+  }
+  
+  .nav-menu {
+    gap: 4rem;
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+  }
+  
+  figcaption {
+    font-size: 1.5rem;
+  }
+  
+  .card {
+    padding: 2rem;
+  }
+  
+  .titles {
+    font-size: 1.4rem;
+  }
+  
+  .contents img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Ultra-wide screens (1921px and above) */
+@media screen and (min-width: 1921px) {
+  header {
+    padding: 0 5rem;
+    width: 100%;
+  }
+  
+  main {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .hero {
+    width: 100%;
+    min-height: 70vh;
+  }
+  
+  .home {
+    width: 100%;
+    gap: 3rem;
+  }
+  
+  #cards {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 3rem;
+    max-width: 1600px;
+    margin: 2rem auto;
+  }
+  
+  .company-card {
+    padding: 3rem;
+  }
+  
+  .company-card h3 {
+    font-size: 1.6rem;
+  }
+  
+  .card-content {
+    gap: 2.5rem;
+  }
+  
+  .card-content img {
+    width: 200px;
+    height: 240px;
+  }
+  
+  .contact-info p {
+    font-size: 1.2rem;
+  }
+  
+  .nav-menu {
+    gap: 5rem;
+  }
+  
+  .nav-link {
+    font-size: 1.3rem;
+    padding: 1.25rem 2rem;
+  }
+  
+  figcaption {
+    font-size: 1.6rem;
+  }
+}
+
+/* Very small mobile devices (max-width: 400px) */
+@media screen and (max-width: 400px) {
+  header {
+    padding: 0 0.5rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  figure img {
+    width: 35px;
+    height: 35px;
+  }
+
+  figcaption {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    min-height: 25vh;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .hero-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .view-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .view-btn {
+    width: 100%;
+    max-width: 180px;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  #cards {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    width: 95%;
+    justify-items: center;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .company-card {
+    padding: 0.8rem;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .card-content img {
+    max-width: 100px;
+    height: auto;
+  }
+
+  footer {
+    padding: 1.2rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+/* Ensure list view works well on all screen sizes */
+@media screen and (min-width: 769px) {
+  #cards.list-view {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .company-card.list-view {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    max-width: none;
+  }
+  
+  .list-view .card-content {
+    margin-top: 0;
+    flex-grow: 1;
+  }
+  
+  .list-view .card-content img {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
   }
 }
