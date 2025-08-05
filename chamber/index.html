@@ -27,6 +27,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./styles/directory.css" />
+    <script src="./scripts/config.js"></script>
     <script src="./scripts/directory.js" defer></script>
   </head>
   <body>
@@ -55,7 +56,7 @@
     <main>
          <!-- Hero Section -->
       <section class="hero">
-        <button class="cta">
+        <button class="hero-btn">
           <a href="#">Join the Chamber</a>
         </button>
       </section>
@@ -83,9 +84,11 @@
         </div>
 
         <!-- Current Weather -->
-        <div class="weather card">
+        <div id="weather">
           <h2 class="titles">Current Weather</h2>
           <div class="current-weather"></div>
+          <h3>Forecast</h3>
+          <div class="forecast"></div>
         </div>
 
         <!-- Weather Forecast -->
