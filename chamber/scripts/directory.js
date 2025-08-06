@@ -3,9 +3,7 @@ const navMenu = document.querySelector(".nav-menu");
 const cards = document.querySelector("#cards");
 const gridViewBtn = document.querySelector("#grid-view");
 const listViewBtn = document.querySelector("#list-view");
-// Weather Section 
-const currentWeather = document.querySelector('.current-weather');
-const forecast = document.querySelector('.forecast');
+
 
 // Hamburger Menu
 
@@ -114,48 +112,6 @@ const displayCard = (companies) => {
 // Initializing the page 
 getCompanyData();
 
-// Home Page weather section
-//const apiKey = config.apiKey; //Get from config.js
-const apiKey = "92fabe08cde5b767105539f92f7b6eb8";
-
-const url = `https://api.openweathermap.org/data/2.5/weather?lat=16.77&lon=-3.01&appid=${apiKey}&units=metric`;
-
-const displayResults = (data) => {
-  let icon = document.createElement("img");
-  let currentTemp = document.createElement("p");
-  let description = document.createElement("p");
-
-  //Creating the image
-  icon.setAttribute(
-    "src",
-    `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
-  );
-  icon.setAttribute("alt", `${data.weather[0].description}`);
-
-  currentTemp.textContent = `Current Temperature: ${data.main.temp}°C`;
-  description.textContent = `Description: ${data.weather[0].description}`;
-
-  currentWeather.appendChild(icon);
-  currentWeather.appendChild(currentTemp);
-  currentWeather.appendChild(description);
-};
-
-const apiFetch = async () => {
-  try {
-    const response = await fetch(url);
-    if (response.ok) {
-      const data = await response.json();
-      // console.log(data);
-      displayResults(data);
-    } else {
-      throw new Error(await response.text())
-    }
-  } catch (error) {
-    console.error("Error fetching data: ", error)
-  }
-};
-
-apiFetch();
 
 
 
