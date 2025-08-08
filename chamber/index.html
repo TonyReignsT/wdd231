@@ -26,9 +26,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="./styles/directory.css" />
+    <!-- <link rel="stylesheet" href="./styles/directory.css" /> -->
+     <link rel="stylesheet" href="./styles/index.css">
     <script src="./scripts/config.js"></script>
-    <script src="./scripts/directory.js" defer></script>
+    <!-- <script src="./scripts/directory.js" defer></script> -->
     <script src="./scripts/index.js" defer></script>
   </head>
   <body>
@@ -62,8 +63,6 @@
         </button>
       </section>
 
-      <!-- Main Content Grid -->
-      <div class="home-grid">
         <!-- Current Events -->
         <div class="events events-card">
           <h2 class="titles">Current Events</h2>
@@ -84,25 +83,33 @@
           </div>
         </div>
 
-        <!-- Current Weather -->
+
+    <!-- Weather Section  -->
+
         <div id="weather">
-          <h2 class="titles">Current Weather</h2>
-          <div class="current-weather"></div>
-          <h3>Forecast</h3>
-          <div class="forecast"></div>
+            <!-- Current Weather -->
+            <div class="weather-current">
+                <h2 class="titles">Current Weather</h2>
+                <div class="current-weather"></div>
+            </div>
+          
+            <!-- Forecast  -->
+            <div class="weather-forecast">
+                <h2>Forecast</h2>
+                <div class="forecast"></div>
+            </div>
+         
         </div>
 
-        <!-- Weather Forecast -->
-        <div class="forecast card"></div>
-        </div>
+        <!-- Company Spotlights Section-->
 
-        <!-- Company Spotlights -->
-        <div class="company-spotlights card">
-          <h2 class="titles">Member Spotlights</h2>
-          <div class="spotlights-container" id="spotlights"></div>
+        <div id="members">
+          <h2>Member Spotlights</h2>
+          <div class="card-content"></div>
         </div>
-      </div>
     </main>
+
+    <!-- Footer Section  -->
     <footer>
       <div class="address">
         <h3>Timbuktu Chamber of Commerce</h3>

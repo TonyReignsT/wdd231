@@ -1,8 +1,35 @@
-// Elements
+// Navigation
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+// Weather
 const currentWeather = document.querySelector(".current-weather");
 const forecastContainer = document.querySelector(".forecast");
 
-// API setup 
+// Member Spotlights
+const members = document.querySelector("#members");
+const cardContent = document.querySelector(".card-content");
+// const memberCard = document.querySelector('.member-card');
+
+// Hamburger Menu
+
+// Activating X and the menu
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
+
+// Closing the navigation bar
+
+document.querySelectorAll(".nav-link").forEach((n) =>
+  n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  })
+);
+
+// API setup
 const apiKey = config.apiKey; //Get from config.js
 const lat = 16.77;
 const lon = -3.01;
@@ -115,3 +142,86 @@ const apiFetch2 = async () => {
 // Kick off both
 apiFetch();
 apiFetch2();
+
+// Member Spotlight
+
+// Getting the members data
+const getMembersData = async () => {
+  try {
+    const members = await fetch("./data/members.json");
+    const membersData = await members.json();
+    console.log(membersData);
+
+    // Filter for gold (3) and silver (2) members only
+    const goldAndSilverMembers = membersData.companies.filter(
+      (company) => company.membership === 1 || company.membership === 2
+    );
+
+    // Get 2-3 random members from gold and silver
+    const randomMembers = getRandomMembers(goldAndSilverMembers, 3);
+
+    displayMembers(randomMembers);
+  } catch (error) {
+    console.error("An error occured: ", error);
+  }
+};
+
+// Function to get random members
+const getRandomMembers = (membersArray, count) => {
+  // Shuffle the array
+  const shuffled = membersArray.sort(() => Math.random() - 0.5);
+  // Return first 'count' items
+  return shuffled.slice(0, count);
+};
+
+// Function to get membership level name
+const getMembershipLevel = (level) => {
+  if (level === 1) return "Gold";
+  if (level === 2) return "Silver";
+  return "Bronze";
+};
+
+// Displaying the members
+
+const displayMembers = (membersList) => {
+  cardContent.innerHTML = "";
+
+    membersList.forEach(member => {
+        // Create the member Card 
+        let name = document.createElement('h3');
+        let logo = document.createElement('img');
+        let phone = document.createElement('p');
+        let address = document.createElement('p');
+        let website = document.createElement('p');
+        let level = document.createElement('p');
+
+
+        // create image 
+         logo.setAttribute("src", member.image);
+         logo.setAttribute("alt", `${member.name} logo`);
+         logo.setAttribute("loading", "lazy");
+         logo.setAttribute("width", "100");
+         logo.setAttribute("height", "100");
+
+        name.textContent = `${member.name}`;
+        phone.innerHTML = `<b>Phone: </b> ${member.phone}`;
+        address.innerHTML = `<b>Address: </b> ${member.address}`;
+        website.innerHTML = `<b>Website: </b> ${member.website}`;
+        level.innerHTML = `<span class='membership-badge'<b>Membership Level: </b> ${getMembershipLevel(
+          member.membership
+        )} member </span>`;
+
+        cardContent.appendChild(name);
+        cardContent.appendChild(logo);
+        cardContent.appendChild(phone);
+        cardContent.appendChild(address);
+        cardContent.appendChild(website);
+        cardContent.appendChild(level);
+
+        // cardContent.appendChild(memberCard);
+        members.appendChild(cardContent);
+
+    })
+};
+
+getMembersData();
