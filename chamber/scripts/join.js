@@ -87,3 +87,13 @@ document
       }
     }
   });
+
+// const details = new URLSearchParams(window.location.search);
+// console.log(details);
+
+// document.querySelector("#results").innerHTML = `
+//   <h4>${details.get("firstName")} ${details.get("lastName")}</h4>
+//   <p>${details.get("email")}</p>
+//   <p>${details.get("phone")}</p>
+//   <p>${details.get("orgTitle")}</p>
+// `;
