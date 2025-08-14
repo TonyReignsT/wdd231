@@ -77,7 +77,7 @@ document
   .addEventListener("submit", function (e) {
 
     //Local Storage
-    e.preventDefault();
+    // e.preventDefault();
     console.log(e.target);
     const formData = new FormData(e.target);
     // Access individual fields
@@ -101,7 +101,7 @@ document
         alert(
           "Organizational title must contain only letters, spaces, and hyphens, with a minimum of 7 characters."
         );
-        // e.preventDefault();
+        e.preventDefault();
         return false;
       }
     }
