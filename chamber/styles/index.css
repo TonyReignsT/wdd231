@@ -1,0 +1,626 @@
+:root {
+  --primary-color: #386641;
+  --secondary-color: #fff4a4;
+  --font-family: "montserrat", sans-serif;
+  --background: #3e5f44;
+  --text-color: #fed16a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--secondary-color);
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  position: relative;
+}
+
+figure {
+  color: var(--text-color);
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+figure img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--background);
+}
+figcaption {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.nav-link:hover {
+  text-decoration: underline;
+  transition: 2s ease;
+}
+
+/* Style for the active/current page */
+.nav-link.active {
+  background-color: var(--secondary-color); /* Yellow background */
+  color: var(--primary-color); /* Green text */
+  font-weight: 700; /* Bolder text */
+  text-decoration: none;
+}
+.nav-link.active:hover {
+  background-color: var(--secondary-color); /* Keep yellow on hover */
+  color: var(--background); /* Darker green on hover */
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 2;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+/* Wayfindind  */
+
+
+/* Hero Section  */
+
+.hero {
+  min-height: 50vh;
+  width: 80%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(../images/chamber.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+}
+.hero-btn a{
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+
+}
+
+.hero-btn a:hover {
+  background-color: var(--background);
+  color: var(--text-color);
+  transition: 0.5s ease;
+}
+
+/* Current Events Section Styling */
+.events-card {
+  background: var(--background);
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: #262626;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
+.titles {
+    color: var(--text-color);
+    padding: 1rem 0;
+}
+
+.event-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.event-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transform: translateY(-2px);
+}
+
+.event-item:last-child {
+  margin-bottom: 0;
+}
+
+.event-date {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  display: inline-block;
+  border: 2px solid var(--primary-color);
+}
+
+.event-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--background);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.event-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Weather Section  */
+
+#weather {
+  color: var(--primary-color);
+  display: flex;
+  justify-content: space-around;
+  background: var(--background);
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: var(--text-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
+
+
+.weather-forecast h2 {
+    margin-bottom: 30px;
+}
+
+/* Member Spotlight Section  */
+#members {
+    background-color: var(--background);
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem 0;
+}
+#members h2 {
+    padding: 1rem;
+}
+
+.card-content {
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+.card-content img ,p {
+    padding: 5px;
+}
+.card-content h3 {
+    margin-top: 1rem;
+    border-top: 2px solid;
+    padding: 5px;
+}
+
+.membership-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+
+/* Footer Section  */
+footer {
+  background-color: var(--background);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1.5rem;
+}
+.socials {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.fa-brands {
+  color: var(--text-color);
+  font-size: 2rem;
+}
+.fa-brands:hover {
+  color: var(--secondary-color);
+}
+
+/* Mobile devices (up to 768px) */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: var(--background);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 1000;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 1rem;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  header {
+    padding: 0 1rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  figure {
+    gap: 8px;
+  }
+
+  figcaption {
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 0 0.5rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .hero {
+    width: 95%;
+    min-height: 30vh;
+    max-width: 100%;
+  }
+
+  .hero-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .events-card {
+    padding: 1rem;
+  }
+  
+  .event-item {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .event-date {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+  }
+  
+  .event-title {
+    font-size: 1rem;
+  }
+  
+  .event-desc {
+    font-size: 0.9rem;
+  }
+
+  /* Weather Section  */
+  #weather {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .weather-current {
+    margin: 1rem;
+    border: 1px solid ;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  .weather-forecast {
+    margin: 1rem;
+    border: 1px solid ;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .socials {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .fa-brands {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablets and medium screens (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Ensure header covers full width */
+  header {
+    padding: 0 2rem;
+    width: 100%;
+    background-color: var(--background);
+  }
+  
+  /* Reset hamburger - should be hidden on larger screens */
+  .hamburger {
+    display: none;
+  }
+  
+  .nav-menu {
+    position: static;
+    left: auto;
+    top: auto;
+    flex-direction: row;
+    background-color: transparent;
+    width: auto;
+    text-align: left;
+    transition: none;
+    z-index: auto;
+    max-width: none;
+    overflow-x: visible;
+    gap: 2rem;
+  }
+  
+  .nav-item {
+    margin: 0;
+    width: auto;
+  }
+  
+  .nav-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
+  
+  main {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+  
+  .hero {
+    width: 90%;
+    min-height: 55vh;
+  }
+  
+  
+  footer {
+    flex-direction: row;
+    text-align: left;
+    gap: 2rem;
+    padding: 1.5rem;
+    max-width: none;
+    overflow-x: visible;
+    justify-content: center;
+  }
+  
+  .socials {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+
+/* Large desktops (1025px - 1440px) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  header {
+    padding: 0 3rem;
+    width: 100%;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .hero {
+    width: 95%;
+    min-height: 60vh;
+  }
+  
+  
+  .nav-menu {
+    gap: 3rem;
+  }
+  
+  .nav-link {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.25rem;
+  }
+  
+  figcaption {
+    font-size: 1.4rem;
+  }
+}
+
+/* Extra large desktops (1441px - 1920px) */
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  header {
+    padding: 0 4rem;
+    width: 100%;
+  }
+  
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .hero {
+    width: 100%;
+    min-height: 65vh;
+  }
+}
+
+/* Ultra-wide screens (1921px and above) */
+@media screen and (min-width: 1921px) {
+  header {
+    padding: 0 5rem;
+    width: 100%;
+  }
+  
+  main {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .hero {
+    width: 100%;
+    min-height: 70vh;
+  }
+  
+  
+  .nav-menu {
+    gap: 5rem;
+  }
+  
+  .nav-link {
+    font-size: 1.3rem;
+    padding: 1.25rem 2rem;
+  }
+  
+  figcaption {
+    font-size: 1.6rem;
+  }
+}
+
+/* Very small mobile devices (max-width: 400px) */
+@media screen and (max-width: 400px) {
+  header {
+    padding: 0 0.5rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  figure img {
+    width: 35px;
+    height: 35px;
+  }
+
+  figcaption {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    min-height: 25vh;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .hero-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  footer {
+    padding: 1.2rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+

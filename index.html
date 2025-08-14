@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Antony Ochieng</title>
+    <!-- Google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome - Icons -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/index.css" />
+
+    <!-- Javascript -->
+    <script src="./scripts/index.js" defer></script>
+  </head>
+  <body>
+    <figure>
+      <img src="./assets/Initials.png" alt="sitepic" />
+      <figcaption>Antony Ochieng</figcaption>
+    </figure>
+    <header>
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Chamber</a></li>
+          <li class="nav-item"><a href="./finalproject/index.html" class="nav-link">Final</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="sect1">
+        <h1>Home</h1>
+      </section>
+      <section class="about">
+        <div class="about-me">
+          <h2>About Me</h2>
+          <p>
+            Hello! I'm Antony Ochieng, a web development student from Nairobi,
+            Kenya. I'm passionate about creating websites and learning new
+            programming skills. I'm currently studying Web and Computer
+            Programming, focusing on HTML, CSS, JavaScript, and Python. I enjoy
+            solving problems and building things that work well and look good.
+          </p>
+        </div>
+
+        <div class="my-profile">
+          <h2>Student Photo</h2>
+          <img src="./assets/reigns.jpg" alt="pic" class="profile-pic" />
+        </div>
+      </section>
+      <section class="courses">
+        <h2>Web Certificate Courses</h2>
+        <div class="course-filters">
+          <div class="row">
+             <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="CSE">CSE</button>
+          <button class="filter-btn" data-filter="WDD">WDD</button>
+          </div>
+         <!-- <div class="column"></div> -->
+          <button class="filter-btn" data-filter="WDD130">WDD130</button>
+          <button class="filter-btn" data-filter="WDD131">WDD131</button>
+          <button class="filter-btn" data-filter="WDD231">WDD231</button>
+        </div>
+
+        <div class="course-grid" id="courseGrid">
+          <!-- Courses will be populated by JavaScript -->
+        </div>
+
+        <div class="credits-total">
+          <p>
+            The total credits for course listed above is
+            <span id="totalCredits">0</span>
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="socials">
+        <a href="#"><img src="./assets/github-sign.png" alt="github" /></a>
+        <a href="#"><img src="./assets/linkedin.png" alt="linkedin" /></a>
+        <a href="#"><img src="./assets/twitter.png" alt="twitter" /></a>
+      </div>
+      <div class="date-foot">
+        <p>
+          &copy; <span id="currentyear"></span> | Antony Ochieng | Nairobi,
+          Kenya.
+        </p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
+  </body>
+</html>

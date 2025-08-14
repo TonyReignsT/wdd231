@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Sankore Mosque & University",
+    "address": "Sankore Quarter, Timbuktu, Mali",
+    "description": "Historic 15th-century mosque and former university, one of the oldest institutions of higher learning in Africa. This UNESCO World Heritage site was once the intellectual heart of the Islamic world.",
+    "image": "./images/discover/sankore.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Djinguereber Mosque",
+    "address": "Central Timbuktu, Mali",
+    "description": "Built in 1327, this is one of the oldest and most famous mosques in Africa. Its distinctive Sudano-Sahelian architectural style with protruding wooden beams makes it an iconic symbol of Timbuktu.",
+    "image": "./images/discover/djinguereber.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Sidi Yahya Mosque",
+    "address": "Old Town, Timbuktu, Mali",
+    "description": "Dating from around 1400, this mosque is said to have a door that will only open at the end of the world. It represents the spiritual heritage and mystique that surrounds Timbuktu.",
+    "image": "./images/discover/sidi.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Ahmed Baba Institute",
+    "address": "Near Sankore, Timbuktu, Mali",
+    "description": "A modern library and research center dedicated to preserving Timbuktu's ancient manuscripts. It houses thousands of historical documents that showcase the city's scholarly traditions.",
+    "image": "./images/discover/baba.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Timbuktu Market Square",
+    "address": "Central Market, Timbuktu, Mali",
+    "description": "The vibrant heart of modern Timbuktu where traditional goods, crafts, and spices are traded. This bustling market continues the city's 1000-year-old tradition as a trading hub.",
+    "image": "./images/discover/market.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Niger River Port",
+    "address": "Kabara Port, Timbuktu, Mali",
+    "description": "The historic port that connected Timbuktu to the world. Located 8km from the city center, this is where salt, gold, and knowledge once flowed through ancient trade routes.",
+    "image": "./images/discover/port.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Ethnological Museum",
+    "address": "Museum Quarter, Timbuktu, Mali",
+    "description": "Showcasing the rich cultural heritage of the Songhai, Tuareg, and other ethnic groups that have shaped Timbuktu's identity over centuries. Features traditional crafts, weapons, and artifacts.",
+    "image": "./images/discover/museum.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Desert Dunes Gateway",
+    "address": "Northern Outskirts, Timbuktu, Mali",
+    "description": "The edge of the Sahara Desert where golden sand dunes meet the ancient city. A breathtaking landscape that has inspired travelers, traders, and scholars for over a millennium.",
+    "image": "./images/discover/dunes.jpg"
+  }
+]

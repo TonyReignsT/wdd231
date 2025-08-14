@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "Aventador SVJ",
+    "brand": "Lamborghini",
+    "type": "Supercar",
+    "price": 517770,
+    "year": 2022,
+    "description": "A naturally aspirated V12 beast delivering 759 hp, combining Italian design with extreme performance and aerodynamics.",
+    "image": "./images/svj.jpg"
+  },
+  {
+    "id": 2,
+    "name": "M8 Competition",
+    "brand": "BMW",
+    "type": "Grand Tourer",
+    "price": 134100,
+    "year": 2023,
+    "description": "A luxurious high-performance coupe with 617 hp and a 0-60 time of just 3 seconds.",
+    "image": "./images/m8.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Chiron Super Sport 300+",
+    "brand": "Bugatti",
+    "type": "Hypercar",
+    "price": 3900000,
+    "year": 2022,
+    "description": "Quad-turbocharged W16 hypercar capable of exceeding 300 mph, redefining automotive performance limits.",
+    "image": "./images/chiron.jpg"
+  },
+  {
+    "id": 4,
+    "name": "X6 M Competition",
+    "brand": "BMW",
+    "type": "Performance SUV",
+    "price": 127200,
+    "year": 2023,
+    "description": "A coupe-styled SUV with aggressive design, 617 hp, and M-tuned handling dynamics.",
+    "image": "./images/x6.jpg"
+  },
+  {
+    "id": 5,
+    "name": "G-Class AMG G63",
+    "brand": "Mercedes-Benz",
+    "type": "Luxury SUV",
+    "price": 179000,
+    "year": 2023,
+    "description": "Iconic boxy SUV blending luxury with off-road capability, powered by a handcrafted AMG V8.",
+    "image": "./images/g63.jpg"
+  },
+ {
+   "id": 6,
+   "name": "Cayenne Turbo GT",
+   "brand": "Porsche",
+   "type": "High-Performance Luxury SUV",
+   "price": 196300,
+   "year": 2024,
+   "description": "Porsche’s most powerful Cayenne, blending SUV practicality with sports car performance. Features a twin-turbo V8, track-tuned chassis, and blistering acceleration.",
+   "image": "./images/cayenne.jpg"
+ },
+  {
+    "id": 7,
+    "name": "SF90 Stradale",
+    "brand": "Ferrari",
+    "type": "Hybrid Supercar",
+    "price": 625000,
+    "year": 2023,
+    "description": "Ferrari’s first plug-in hybrid supercar with 986 hp and jaw-dropping Italian styling.",
+    "image": "./images/fstradale.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Cullinan",
+    "brand": "Rolls-Royce",
+    "type": "Luxury SUV",
+    "price": 355000,
+    "year": 2023,
+    "description": "The pinnacle of SUV luxury with bespoke craftsmanship, comfort, and presence.",
+    "image": "./images/cullinan.jpg"
+  },
+  {
+    "id": 9,
+    "name": "MC20",
+    "brand": "Maserati",
+    "type": "Supercar",
+    "price": 217000,
+    "year": 2023,
+    "description": "A lightweight carbon-fiber chassis and 621 hp twin-turbo V6 deliver Italian performance with elegance.",
+    "image": "./images/maserati.jpg"
+  },
+  {
+    "id": 10,
+    "name": "RS e-tron GT",
+    "brand": "Audi",
+    "type": "Electric Sports Sedan",
+    "price": 143900,
+    "year": 2023,
+    "description": "Audi’s flagship electric sports sedan with 637 hp, quattro AWD, and luxurious tech-filled interior.",
+    "image": "./images/audi.jpg"
+  },
+  {
+    "id": 11,
+    "name": "AMG One",
+    "brand": "Mercedes-AMG",
+    "type": "Hypercar",
+    "price": 2700000,
+    "year": 2023,
+    "description": "Formula 1 technology brought to the streets, featuring a hybrid powertrain with over 1,000 hp.",
+    "image": "./images/amg1.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Valhalla",
+    "brand": "Aston Martin",
+    "type": "Hybrid Supercar",
+    "price": 800000,
+    "year": 2024,
+    "description": "Mid-engined hybrid supercar blending Aston Martin elegance with cutting-edge performance.",
+    "image": "./images/valhalla.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Urus Performante",
+    "brand": "Lamborghini",
+    "type": "Performance SUV",
+    "price": 260000,
+    "year": 2023,
+    "description": "A high-performance luxury SUV delivering speed, agility, and Lamborghini’s iconic styling.",
+    "image": "./images/urus.jpg"
+  },
+  {
+    "id": 14,
+    "name": "LaFerrari",
+    "brand": "Ferrari",
+    "type": "Hybrid Hypercar",
+    "price": 1500000,
+    "year": 2017,
+    "description": "Ferrari’s flagship hybrid hypercar with a V12 engine and F1-derived KERS system.",
+    "image": "./images/laferrari.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Bentayga Speed",
+    "brand": "Bentley",
+    "type": "Luxury SUV",
+    "price": 262000,
+    "year": 2023,
+    "description": "The world’s fastest luxury SUV, combining handcrafted luxury with a 626 hp W12 engine.",
+    "image": "./images/bentayga.jpg"
+  }
+]

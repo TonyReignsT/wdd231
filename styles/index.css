@@ -1,0 +1,457 @@
+:root {
+    --primary-color: #2563eb;      
+    --secondary-color: #fbbf24;   
+    --background: #f9fafb;        
+    --text-color: #1e293b;
+    --font: 'Montserrat', sans-serif;
+    --back-color: #EBE8DB;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+}
+
+figure {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+}
+
+figure img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 5px;
+}
+
+figcaption {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-color);
+  letter-spacing: 1px;
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+/* section 1  */
+.sect1 h1 {
+    padding: 15px;
+}
+
+/* Section 2  */
+.about {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 10px;
+}
+
+.about-me {
+    width: 60%;
+    background-color: var(--back-color);
+}
+.about-me h2 {
+    background-color: var(--text-color);
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+.about-me p {
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.my-profile {
+    width: 40%;
+    background-color: var(--back-color);
+}
+.my-profile h2 {
+    background-color: var(--text-color);
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+
+}
+
+.my-profile img {
+    display: block;
+    margin: auto;
+    
+}
+.profile-pic {
+    width: 200px;
+    height: auto;
+    /* border-radius: 50%; */
+    padding: 5px;
+    /* align-items: center; */
+
+}
+
+/* Section 3  */
+
+.courses h2 {
+    background-color: var(--text-color);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.course-filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--back-color);
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: var(--font);
+    font-size: 1rem;
+}
+
+.filter-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transform: translateY(-2px);
+}
+
+/* Course Grid  */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.course-card {
+    background-color: var(--background);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    /* box-shadow: ; */
+    transition: all 0.3s ease;
+    border: 1px solid var(--text-color);
+    position: relative;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.course-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+  }
+
+  .course-card:hover {
+    transform: translateY(-5px);
+    /* box-shadow: ; */
+  }
+
+  /* .course-card.completed {
+    border-color: var(--secondary-color);
+  } */
+
+  /* .course-card.completed::before {
+    background: var(--secondary-color);
+  } */
+
+  .course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .course-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .course-number {
+    background-color: var(--primary-color);
+    color: var(--background);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .course-description {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .course-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .tech-tag {
+    background-color: var(--back-color);
+    color: var(--primary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .course-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+  }
+
+  /* .status-completed {
+    color: var(--secondary-color);
+  } */
+
+  .status-progress {
+    color: var(--primary-color);
+  }
+
+
+  .credits-total {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background-color: var(--back-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .credits-total p {
+    text-align: center;
+  }
+
+
+
+  /* Footer Section  */
+
+  footer {
+    text-align: center;
+    margin: 2rem 0 0;
+   
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 1rem;
+  }
+
+  .socials img {
+    display: block;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+  }
+
+  .date-foot {
+    background-color: var(--text-color);
+    color: var(--background);
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+
+@media (max-width:768px) {
+    .hamburger {
+        display: block;
+    }
+
+    /* Making the X */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(-45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(45deg);
+    }
+    .nav-menu {
+        position: fixed;
+        left: 100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-item {
+        margin: 16px 0;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* About & Profile  */
+
+    .sect1 {
+        padding: 15px;
+        text-align: left;
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .sect1 h1 {
+      padding: 10px 0;
+      font-size: 1.8rem;
+    }
+
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+      gap: 20px;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    .about-me {
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 0;
+    }
+
+    .about-me h2 {
+        padding: 12px 10px;
+        font-size: 1.1rem;
+    }
+
+    .about-me p {
+        padding: 20px;
+        font-size: 1rem;
+        text-align: left;
+        line-height: 1.7;
+    }
+
+    .my-profile {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .my-profile h2 {
+        padding: 12px 10px;
+        font-size: 1.1rem;
+    }
+
+    .profile-pic {
+        width: min(250px, 80%);
+        margin: 20px auto 25px auto;
+    }
+
+    /* Courses  */
+
+    .courses h2 {
+      margin: 10px;
+      font-size: 1.1rem;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem; 
+    }
+
+    .course-filters {
+      display: flex;
+      flex-direction: column;
+    }
+
+
+
+}

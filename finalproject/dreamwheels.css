@@ -1,0 +1,99 @@
+/* Color & Font Variables */
+:root {
+  --primary-color: #0d0d0d;
+  --secondary-color: #d4af37;
+  --accent-color: #ffffff;
+  --highlight-color: #b22222;
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Open Sans", sans-serif;
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page Styling */
+body {
+  font-family: var(--secondary-font);
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: var(--primary-font);
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  border-bottom: 3px solid var(--secondary-color);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--highlight-color);
+  margin-top: 10px;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* Lists */
+ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+/* Sections */
+main > div {
+  background-color: rgba(255, 255, 255, 0.02);
+  border-left: 4px solid var(--secondary-color);
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+
+main > div:hover {
+  transform: translateY(-2px);
+}
+
+/* Links */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--highlight-color);
+  text-decoration: underline;
+}
+
+/* Highlighted text inside paragraphs */
+.highlight {
+  color: var(--highlight-color);
+  font-weight: bold;
+}

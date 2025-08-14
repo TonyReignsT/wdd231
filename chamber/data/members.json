@@ -1,0 +1,81 @@
+{
+  "companies": [
+    {
+      "name": "TechNova Solutions",
+      "address": "123 Innovation Ave, Silicon City, CA 94016",
+      "phone": "+1-555-123-4567",
+      "website": "https://www.technova.com",
+      "image": "./images/technova.jpg",
+      "membership": 3,
+      "description": "Leading provider of cloud-based business solutions.",
+      "tagline": "Innovate. Integrate. Elevate.",
+      "email": "info@technova.com"
+    },
+    {
+      "name": "GreenLeaf Organics",
+      "address": "456 Eco Rd, Green Town, OR 97035",
+      "phone": "+1-555-234-5678",
+      "website": "https://www.greenleaforganics.com",
+      "image": "./images/greenLeaf.jpg",
+      "membership": 2,
+      "description": "Organic food supplier and local farm network.",
+      "tagline": "Fresh from farm to table.",
+      "email": "sales@greenleaforganics.com"
+    },
+    {
+      "name": "Bright Future Education",
+      "address": "789 Learning Ln, Scholar City, TX 75001",
+      "phone": "+1-555-345-6789",
+      "website": "https://www.brightfutureedu.org",
+      "image": "./images/education.jpg",
+      "membership": 1,
+      "description": "Tutoring and educational resources for all ages.",
+      "tagline": "Empowering minds for tomorrow.",
+      "email": "support@brightfutureedu.org"
+    },
+    {
+      "name": "Urban Fitness Center",
+      "address": "321 Workout Blvd, Fitville, NY 10001",
+      "phone": "+1-555-456-7890",
+      "website": "https://www.urbanfitness.com",
+      "image": "./images/urbanFitness.jpg",
+      "membership": 2,
+      "description": "State-of-the-art gym and wellness programs.",
+      "tagline": "Stronger every day.",
+      "email": "contact@urbanfitness.com"
+    },
+    {
+      "name": "Pixel Perfect Design",
+      "address": "654 Creative St, Art City, FL 33101",
+      "phone": "+1-555-567-8901",
+      "website": "https://www.pixelperfect.com",
+      "image": "./images/design.jpg",
+      "membership": 3,
+      "description": "Graphic design and branding agency.",
+      "tagline": "Designs that speak.",
+      "email": "hello@pixelperfect.com"
+    },
+    {
+      "name": "SafeHome Security",
+      "address": "987 Secure Ave, Guardtown, WA 98001",
+      "phone": "+1-555-678-9012",
+      "website": "https://www.safehome.com",
+      "image": "./images/security.jpg",
+      "membership": 1,
+      "description": "Home and business security systems.",
+      "tagline": "Your safety, our priority.",
+      "email": "service@safehome.com"
+    },
+    {
+      "name": "Fresh Start Cleaning",
+      "address": "159 Clean Dr, Shine City, IL 60601",
+      "phone": "+1-555-789-0123",
+      "website": "https://www.freshstartcleaning.com",
+      "image": "./images/cleaning.jpg",
+      "membership": 2,
+      "description": "Residential and commercial cleaning services.",
+      "tagline": "Clean spaces, happy faces.",
+      "email": "bookings@freshstartcleaning.com"
+    }
+  ]
+}

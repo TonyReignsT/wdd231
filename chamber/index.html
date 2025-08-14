@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Timbuktu Chamber of Commerce" />
+    <meta
+      property="og:description"
+      content="Connecting businesses, empowering growth  discover Timbuktu's business directory, events, and more."
+    />
+    <meta
+      property="og:image"
+      content="https://example.com/images/chamber-preview.png"
+    />
+    <meta
+      property="og:url"
+      content="https://tonyreignst.github.io/wdd231/chamber/directory.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Timbuktu Chamber of Commerce" />
+
+    <meta name="description" content="WDD 131 - Antony Ochieng">
+    <meta name="author" content="Antony Ochieng">
+
+    <title>Timbuktu Chamber of Commerce</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <!-- <link rel="stylesheet" href="./styles/directory.css" /> -->
+     <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/config.js"></script>
+    <!-- <script src="./scripts/directory.js" defer></script> -->
+    <script src="./scripts/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <figure>
+        <img src="./images/company.png" alt="logo" />
+        <figcaption>Timbuktu Chamber of Commerce</figcaption>
+      </figure>
+
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+          <li class="nav-item">
+            <a href="./directory.html" class="nav-link">Directory</a>
+          </li>
+          <li class="nav-item"><a href="./join.html" class="nav-link">Join</a></li>
+          <li class="nav-item"><a href="./discover.html" class="nav-link">Discover</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+         <!-- Hero Section -->
+      <section class="hero">
+        <button class="hero-btn">
+          <a href="./join.html">Join the Chamber</a>
+        </button>
+      </section>
+
+        <!-- Current Events -->
+        <div class="events events-card">
+          <h2 class="titles">Current Events</h2>
+          <div class="event-item">
+            <div class="event-date">August 15, 2025</div>
+            <div class="event-title">Annual Business Networking Gala</div>
+            <div class="event-desc">Join us for an evening of networking and celebrating our business community. Awards ceremony and guest speakers included.</div>
+          </div>
+          <div class="event-item">
+            <div class="event-date">August 22, 2025</div>
+            <div class="event-title">Small Business Workshop</div>
+            <div class="event-desc">Learn essential strategies for growing your business. Topics include marketing, finance, and customer retention.</div>
+          </div>
+          <div class="event-item">
+            <div class="event-date">September 5, 2025</div>
+            <div class="event-title">Trade Fair & Expo</div>
+            <div class="event-desc">Showcase your products at our annual trade fair. Network and explore new business opportunities.</div>
+          </div>
+        </div>
+
+
+    <!-- Weather Section  -->
+
+        <div id="weather">
+            <!-- Current Weather -->
+            <div class="weather-current">
+                <h2 class="titles">Current Weather</h2>
+                <div class="current-weather"></div>
+            </div>
+          
+            <!-- Forecast  -->
+            <div class="weather-forecast">
+                <h2>Forecast</h2>
+                <div class="forecast"></div>
+            </div>
+         
+        </div>
+
+        <!-- Company Spotlights Section-->
+
+        <div id="members">
+          <h2>Member Spotlights</h2>
+          <div class="card-content"></div>
+        </div>
+    </main>
+
+    <!-- Footer Section  -->
+    <footer>
+      <div class="address">
+        <h3>Timbuktu Chamber of Commerce</h3>
+        <p>10 Rue De La Paix</p>
+        <p>Timbuktu, Mali 999</p>
+        <p>info@timbuktucc.org</p>
+        <p>(223) 555-2300</p>
+      </div>
+      <div class="socials">
+        <a href="https://www.youtube.com/"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a href="https://x.com/"
+          ><i class="fa-brands fa-square-x-twitter"></i
+        ></a>
+        <a href="https://linkedin.com/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+      <div class="date-foot">
+        <p>WDD231 Class Project</p>
+        <p>Antony Ochieng</p>
+        <p>
+          &copy; <span id="currentyear"></span> Timbuktu Chamber of Commerce
+        </p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
+  </body>
+</html>
