@@ -324,3 +324,51 @@ footer {
     height: auto;
   }
 }
+
+
+/* === Modal Styling === */
+#about {
+  padding: 2rem;
+  border: none;
+  border-radius: 12px;
+  width: min(90%, 500px);
+  background: var(--primary-color);
+  color: var(--accent-color);
+  font-family: var(--secondary-font);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
+  border: 2px solid var(--secondary-color);
+  position: relative;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+/* This ensures it is centered */
+dialog {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Backdrop dim effect */
+#about::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}

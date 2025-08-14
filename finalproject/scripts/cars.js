@@ -37,8 +37,8 @@ const displayCard = (cars) => {
     price.classList.add("price");
     cardContent.classList.add("card-items");
 
-    brand.textContent = `${car.brand} ${car.name} ${car.year}`;
-    desc.textContent = `${car.description}`;
+    brand.textContent = `- ${car.brand} ${car.name} ${car.year}`;
+    desc.textContent = `- ${car.description}`;
     price.textContent = `$ ${car.price}`;
 
     // Creating Image
