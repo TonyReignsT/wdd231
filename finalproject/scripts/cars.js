@@ -28,7 +28,7 @@ const featured = document.querySelector(".featured-cars");
 
 // Displaying Cars Data
 const displayCard = (cars) => {
-  cars.innerHTML = "";
+  featured.innerHTML = "";
 
   cars.forEach((car) => {
     let cardContent = document.createElement("div");
