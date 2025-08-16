@@ -1,3 +1,7 @@
+import { initContactForm } from "./contact.js";
+
+initContactForm();
+
 // ======================
 // Navigation
 // ======================
